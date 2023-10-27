@@ -1,21 +1,14 @@
 using TMPro;
 using UnityEngine;
 
-public class generatePipes : MonoBehaviour
+public class generatePipesThatMoves : MonoBehaviour
 {
     public GameObject pipes;
     public GameObject clouds;
-    public GameObject nextGenerator;
     public float timerPipes = 0;
     public float delayPipes = 3;
     public float timerClouds = 0;
     public float delayClouds = 4;
-    public float generatedPipes = 0;
-
-    private void Start()
-    {
-        genPipes();
-    }
 
     void Update()
     {
@@ -38,7 +31,6 @@ public class generatePipes : MonoBehaviour
             timerClouds = 0;
             delayClouds = Random.Range(1, 6);
         }
-
     }
 
     public void genPipes()
@@ -46,13 +38,7 @@ public class generatePipes : MonoBehaviour
         int aux = 10;
         float rightLimiter = transform.position.x + aux;
         float leftLimiter = transform.position.x - aux;
-        Instantiate(pipes, new Vector3(Random.Range(rightLimiter, leftLimiter), transform.position.y, 0) , transform.rotation);
-        generatedPipes += 1;
-        if(generatedPipes == 10)
-        {
-            nextGenerator.SetActive(true);
-            gameObject.SetActive(false);
-        }
+        Instantiate(pipes, new Vector3(Random.Range(rightLimiter, leftLimiter), transform.position.y, 0), transform.rotation);
     }
 
     public void genClouds()

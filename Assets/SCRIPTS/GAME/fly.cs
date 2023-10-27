@@ -9,13 +9,11 @@ public class fly : MonoBehaviour
     public logic logic2;
     public bool alive = true;
 
-    // Start is called before the first frame update
     void Start()
     {
         logic2 = GameObject.FindGameObjectWithTag("LOGICA").GetComponent<logic>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (alive)

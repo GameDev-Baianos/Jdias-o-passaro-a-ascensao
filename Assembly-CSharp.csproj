@@ -62,6 +62,8 @@
     <Compile Include="Assets\SCRIPTS\GAME\addPoint.cs" />
     <Compile Include="Assets\SCRIPTS\GAME\generatePipes.cs" />
     <Compile Include="Assets\SCRIPTS\MENU\startGame.cs" />
+    <Compile Include="Assets\SCRIPTS\GAME\pipeSideMovement.cs" />
+    <Compile Include="Assets\SCRIPTS\GAME\generatePipesThatMoves.cs" />
     <Compile Include="Assets\SCRIPTS\GAME\logic.cs" />
     <Compile Include="Assets\SCRIPTS\GAME\pipeFall.cs" />
     <Compile Include="Assets\SCRIPTS\GAME\fly.cs" />

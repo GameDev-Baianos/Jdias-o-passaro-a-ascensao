@@ -288,10 +288,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pipes: {fileID: 7257666336102932967, guid: f24accc3d3b19cc4d8c02034f522d5f4, type: 3}
   clouds: {fileID: 2827220948762302445, guid: 63f1dc1e4acdf634e8b2d0ff124202d0, type: 3}
+  nextGenerator: {fileID: 1499355158}
   timerPipes: 0
   delayPipes: 3
   timerClouds: 0
   delayClouds: 4
+  generatedPipes: 0
 --- !u!4 &217080867
 Transform:
   m_ObjectHideFlags: 0
@@ -1020,6 +1022,56 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 69.03502, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1499355158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1499355160}
+  - component: {fileID: 1499355161}
+  m_Layer: 0
+  m_Name: CANOSGENERATORQUEMOVEM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1499355160
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499355158}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.4, y: 30.6, z: 0.12778918}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &1499355161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499355158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35ab9119bb3f5da42bcf25115f74161a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pipes: {fileID: 7257666336102932967, guid: bd4e02d5f3d039745b4a55e9944d017a, type: 3}
+  clouds: {fileID: 2827220948762302445, guid: 9248415662d3ae64dbdc0fcbcfea44f9, type: 3}
+  timerPipes: 0
+  delayPipes: 3
+  timerClouds: 0
+  delayClouds: 4
 --- !u!1 &1508993385
 GameObject:
   m_ObjectHideFlags: 0
@@ -1712,4 +1764,5 @@ SceneRoots:
   - {fileID: 738989744}
   - {fileID: 727986214}
   - {fileID: 1000460901}
+  - {fileID: 1499355160}
   - {fileID: 217080867}
