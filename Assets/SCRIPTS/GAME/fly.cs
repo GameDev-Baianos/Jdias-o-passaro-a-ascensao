@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class fly : MonoBehaviour
@@ -7,11 +6,12 @@ public class fly : MonoBehaviour
     public int flyStrength;
     public int sideMoveStrength;
     public logic logic2;
-    public bool alive = true;
+    public static bool alive;
 
     void Start()
     {
         logic2 = GameObject.FindGameObjectWithTag("LOGICA").GetComponent<logic>();
+        alive = true;
     }
 
     void Update()

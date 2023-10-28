@@ -16,12 +16,16 @@ public class logic : MonoBehaviour
 
     public void restartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(1);
+    }
+
+    public void restartMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void gameOver()
     {
         screen.SetActive(true);
     }
-
 }

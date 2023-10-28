@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 
 public class generatePipes : MonoBehaviour
@@ -51,7 +50,7 @@ public class generatePipes : MonoBehaviour
         if(generatedPipes == 10)
         {
             nextGenerator.SetActive(true);
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 

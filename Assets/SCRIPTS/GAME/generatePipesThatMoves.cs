@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 
 public class generatePipesThatMoves : MonoBehaviour
@@ -8,18 +7,29 @@ public class generatePipesThatMoves : MonoBehaviour
     public float timerPipes = 0;
     public float delayPipes = 3;
     public float timerClouds = 0;
-    public float delayClouds = 4;
+    public float delayClouds = 2;
+    public int generatedPipes = 0;
+    public GameObject finishGameScreen;
+    public GameObject outsideBox;
 
     void Update()
     {
-        if (timerPipes < delayPipes)
+        if (generatedPipes == 2 )
         {
-            timerPipes += Time.deltaTime;
+            Invoke("finishGame", 9);
+            generatedPipes++;
         }
         else
         {
-            genPipes();
-            timerPipes = 0;
+            if (timerPipes < delayPipes)
+            {
+                timerPipes += Time.deltaTime;
+            }
+            else if (generatedPipes < 2)
+            {
+                genPipes();
+                timerPipes = 0;
+            }
         }
         if (timerClouds < delayClouds)
         {
@@ -39,6 +49,8 @@ public class generatePipesThatMoves : MonoBehaviour
         float rightLimiter = transform.position.x + aux;
         float leftLimiter = transform.position.x - aux;
         Instantiate(pipes, new Vector3(Random.Range(rightLimiter, leftLimiter), transform.position.y, 0), transform.rotation);
+        generatedPipes++;
+
     }
 
     public void genClouds()
@@ -49,5 +61,14 @@ public class generatePipesThatMoves : MonoBehaviour
         newCloud.transform.localScale = new Vector3(randomScaling, randomScaling, 1);
 
         Instantiate(newCloud, new Vector3(Random.Range(-30, 35), transform.position.y, 0), newCloud.transform.rotation);
+    }
+
+    private void finishGame()
+    {
+        if (fly.alive == true)
+        {
+            finishGameScreen.SetActive(true);
+            outsideBox.SetActive(false);
+        }
     }
 }
