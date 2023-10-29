@@ -63,9 +63,11 @@
     <Compile Include="Assets\SCRIPTS\GAME\generatePipes.cs" />
     <Compile Include="Assets\SCRIPTS\MENU\startGame.cs" />
     <Compile Include="Assets\SCRIPTS\GAME\pipeSideMovement.cs" />
+    <Compile Include="Assets\SCRIPTS\GAME\coinSound.cs" />
     <Compile Include="Assets\SCRIPTS\GAME\generatePipesThatMoves.cs" />
     <Compile Include="Assets\SCRIPTS\GAME\logic.cs" />
     <Compile Include="Assets\SCRIPTS\GAME\restartGame.cs" />
+    <Compile Include="Assets\SCRIPTS\MENU\backgroundMusic.cs" />
     <Compile Include="Assets\SCRIPTS\GAME\pipeFall.cs" />
     <Compile Include="Assets\SCRIPTS\GAME\fly.cs" />
   </ItemGroup>

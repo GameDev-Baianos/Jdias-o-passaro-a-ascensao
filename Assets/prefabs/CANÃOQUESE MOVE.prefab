@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   logic2: {fileID: 0}
+  howMany: 1
 --- !u!61 &4440026290284089063
 BoxCollider2D:
   m_ObjectHideFlags: 0

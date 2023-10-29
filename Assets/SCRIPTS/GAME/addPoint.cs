@@ -3,6 +3,7 @@ using UnityEngine;
 public class addPoint : MonoBehaviour
 {
     public logic logic2;
+    public int howMany = 1;
 
     void Start()
     {
@@ -12,7 +13,7 @@ public class addPoint : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 3) {
-            logic2.addPoint();
+            logic2.addPoint(howMany);
             Destroy(gameObject);
         }
     }

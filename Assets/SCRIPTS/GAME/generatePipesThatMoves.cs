@@ -4,6 +4,7 @@ public class generatePipesThatMoves : MonoBehaviour
 {
     public GameObject pipes;
     public GameObject clouds;
+    public GameObject coins;
     public float timerPipes = 0;
     public float delayPipes = 3;
     public float timerClouds = 0;
@@ -14,7 +15,7 @@ public class generatePipesThatMoves : MonoBehaviour
 
     void Update()
     {
-        if (generatedPipes == 2 )
+        if (generatedPipes == 10 )
         {
             Invoke("finishGame", 9);
             generatedPipes++;
@@ -25,7 +26,7 @@ public class generatePipesThatMoves : MonoBehaviour
             {
                 timerPipes += Time.deltaTime;
             }
-            else if (generatedPipes < 2)
+            else if (generatedPipes < 10)
             {
                 genPipes();
                 timerPipes = 0;
@@ -48,9 +49,12 @@ public class generatePipesThatMoves : MonoBehaviour
         int aux = 10;
         float rightLimiter = transform.position.x + aux;
         float leftLimiter = transform.position.x - aux;
+        if (generatedPipes % 2 == 0)
+        {
+            Instantiate(coins, new Vector3(Random.Range(-20, 25), transform.position.y + 17, 0), transform.rotation);
+        }
         Instantiate(pipes, new Vector3(Random.Range(rightLimiter, leftLimiter), transform.position.y, 0), transform.rotation);
         generatedPipes++;
-
     }
 
     public void genClouds()

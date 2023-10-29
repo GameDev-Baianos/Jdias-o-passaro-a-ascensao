@@ -58,8 +58,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7355419199751045109}
-  - component: {fileID: 1602443289461591349}
   - component: {fileID: 4440026290284089063}
+  - component: {fileID: 7164973430091472241}
   m_Layer: 0
   m_Name: POTNO
   m_TagString: Untagged
@@ -82,19 +82,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5810456261063825863}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1602443289461591349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7737601366328443658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 915cedc60b3259940bdfdfd7827f7710, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  logic2: {fileID: 0}
 --- !u!61 &4440026290284089063
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -140,6 +127,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.917404, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7164973430091472241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7737601366328443658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 915cedc60b3259940bdfdfd7827f7710, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logic2: {fileID: 0}
+  howMany: 1
 --- !u!1 &8466834532354239283
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class startGame : MonoBehaviour 
 {
     public GameObject startGameButton;
+    public GameObject endGameButton;
     public TextMeshProUGUI timerObject;
 
     public void Update()
@@ -16,10 +17,14 @@ public class startGame : MonoBehaviour
         }
     }
 
-    public void StartGame()
+    public void startGamefunction()
     {
         startGameButton.SetActive(false);
         startTimer();
+    }
+    public void exitGame()
+    {
+        Application.Quit();
     }
     public void startTimer()
     {

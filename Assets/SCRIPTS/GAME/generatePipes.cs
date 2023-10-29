@@ -4,6 +4,7 @@ public class generatePipes : MonoBehaviour
 {
     public GameObject pipes;
     public GameObject clouds;
+    public GameObject coins;
     public GameObject nextGenerator;
     public float timerPipes = 0;
     public float delayPipes = 3;
@@ -37,7 +38,6 @@ public class generatePipes : MonoBehaviour
             timerClouds = 0;
             delayClouds = Random.Range(1, 6);
         }
-
     }
 
     public void genPipes()
@@ -47,7 +47,11 @@ public class generatePipes : MonoBehaviour
         float leftLimiter = transform.position.x - aux;
         Instantiate(pipes, new Vector3(Random.Range(rightLimiter, leftLimiter), transform.position.y, 0) , transform.rotation);
         generatedPipes += 1;
-        if(generatedPipes == 10)
+        if (generatedPipes % 2 == 0)
+        {
+            Instantiate(coins, new Vector3(Random.Range(-20, 25), transform.position.y + 17, 0), transform.rotation);
+        }
+        if (generatedPipes == 10 && fly.alive == true)
         {
             nextGenerator.SetActive(true);
             Destroy(gameObject);

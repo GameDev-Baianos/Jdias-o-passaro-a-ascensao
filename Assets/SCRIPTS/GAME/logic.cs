@@ -8,10 +8,19 @@ public class logic : MonoBehaviour
     public int score;
     public GameObject screen;
 
-    public void addPoint()
+    public void addPoint(int howMany)
     {
-        score++;
+        score += howMany;
         canvas.text = score.ToString();
+    }
+
+    public void destroyAudio(GameObject audio) {
+        Destroy(audio.gameObject, 1);
+    }
+
+    public void exitGame()
+    {
+        Application.Quit();
     }
 
     public void restartGame()
